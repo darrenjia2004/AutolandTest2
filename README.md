@@ -1,0 +1,6 @@
+  This github repo is meant to allow for testing of my python function which outputs the [x,y,z] vector pointing to the center of the landing pad if given the x,y of the landing pad on the screen, the yaw pitch and roll of the plane, and the altitude of the plane. I'm using Unity as a stand in for actual image data.
+ 
+ In order to test, move and rotate the empty gameobject that is the parent of the camera and capsule. Then move the empty gameobject that is the parent of the square such that it is still visible to the camera. Then press play at the top of the screen and then space bar to print the required values to the console. This will give the x,y position of the landing pad on the screen, the yaw pitch roll of the camera, the altitude of the camera, and the expected x and y distance between the landing pad and the camera in world space. Note that because unity uses a left handed coordinate system with y pointing up, the camera should not be facing down but rather to the side so that it looks in the positive z direction. Also do not use the rotation values in the inspector for yaw pitch roll because rotation in a left handed system is defined differently.
+  
+  Once you obtain the required values, you can input them into the calculateDistance function in python. The printed vector should have the value
+[expected x, expected y, altitude].
